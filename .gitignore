@@ -1,0 +1,7 @@
+#Игнорируемые файлы
+
+#Игнорировать все файлы в каталоге
+Vivado_projects/**/*.jou
+Vivado_projects/**/*.log
+
+/.Xil
