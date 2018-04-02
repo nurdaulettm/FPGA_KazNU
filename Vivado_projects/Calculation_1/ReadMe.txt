@@ -1,0 +1,1 @@
+Наше первое правильное решение. Без FIFO без Wifi. Только Post Synthesis Functional Simulation. Blocking Mode. 
