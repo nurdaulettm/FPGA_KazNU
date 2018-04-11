@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="D:/Calculations/project_2/project_1.xpr">
+<Project Version="7" Minor="10" Path="D:/GitHub/FPGA-KazNU/Vivado_projects/Calculation_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="02958141145c4546bf697b66daaa0f73"/>
@@ -34,13 +34,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
         <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hw_handoff/calc_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hw_handoff/calc.hwh"/>
-        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="ip/calc_floating_point_1_0/calc_floating_point_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hdl/calc.v"/>
-        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hdl/calc.hwdef"/>
+        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="ip/calc_floating_point_0_0/calc_floating_point_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="calc_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="ip/calc_floating_point_2_0/calc_floating_point_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="ip/calc_floating_point_0_0/calc_floating_point_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="ip/calc_floating_point_1_0/calc_floating_point_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hdl/calc.hwdef"/>
+        <CompFileExtendedInfo CompFileName="calc.bd" FileRelPathName="hw_handoff/calc.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/calc/hdl/calc_wrapper.v">
         <FileInfo>

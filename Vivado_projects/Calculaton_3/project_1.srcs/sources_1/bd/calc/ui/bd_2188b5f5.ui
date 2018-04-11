@@ -1,0 +1,84 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port E_valid -pg 1 -y 730 -defaultsOSRD
+preplace port k_valid -pg 1 -y 570 -defaultsOSRD
+preplace port k_ready -pg 1 -y 440 -defaultsOSRD
+preplace port result_input3_ready -pg 1 -y 460 -defaultsOSRD
+preplace port D_ready -pg 1 -y 1160 -defaultsOSRD
+preplace port result_input3_valid -pg 1 -y 650 -defaultsOSRD
+preplace port c_valid -pg 1 -y 310 -defaultsOSRD
+preplace port aclken2 -pg 1 -y 1090 -defaultsOSRD
+preplace port result_input2_ready -pg 1 -y 860 -defaultsOSRD
+preplace port b_valid -pg 1 -y 230 -defaultsOSRD
+preplace port aclken3 -pg 1 -y 770 -defaultsOSRD
+preplace port aclken -pg 1 -y 350 -defaultsOSRD
+preplace port D_valid -pg 1 -y 1050 -defaultsOSRD
+preplace port result_input2_valid -pg 1 -y 970 -defaultsOSRD
+preplace port E_ready -pg 1 -y 840 -defaultsOSRD
+preplace port c_ready -pg 1 -y 420 -defaultsOSRD
+preplace port reset2 -pg 1 -y 1110 -defaultsOSRD
+preplace port clk -pg 1 -y 330 -defaultsOSRD
+preplace port result3_valid -pg 1 -y 670 -defaultsOSRD
+preplace port reset3 -pg 1 -y 790 -defaultsOSRD
+preplace port b_ready -pg 1 -y 40 -defaultsOSRD
+preplace port result2_valid -pg 1 -y 1030 -defaultsOSRD
+preplace port aresetn -pg 1 -y 370 -defaultsOSRD
+preplace port a_ready -pg 1 -y 20 -defaultsOSRD
+preplace port result_valid -pg 1 -y 250 -defaultsOSRD
+preplace port a_valid -pg 1 -y 150 -defaultsOSRD
+preplace portBus result2 -pg 1 -y 1010 -defaultsOSRD
+preplace portBus A -pg 1 -y 110 -defaultsOSRD
+preplace portBus result3 -pg 1 -y 650 -defaultsOSRD
+preplace portBus B -pg 1 -y 190 -defaultsOSRD
+preplace portBus C -pg 1 -y 270 -defaultsOSRD
+preplace portBus k -pg 1 -y 530 -defaultsOSRD
+preplace portBus D -pg 1 -y 1010 -defaultsOSRD
+preplace portBus E -pg 1 -y 690 -defaultsOSRD
+preplace portBus result_input2 -pg 1 -y 930 -defaultsOSRD
+preplace portBus result_input3 -pg 1 -y 610 -defaultsOSRD
+preplace portBus result -pg 1 -y 230 -defaultsOSRD
+preplace inst floating_point_0 -pg 1 -lvl 1 -y 230 -defaultsOSRD
+preplace inst floating_point_1 -pg 1 -lvl 1 -y 1010 -defaultsOSRD
+preplace inst floating_point_2 -pg 1 -lvl 1 -y 650 -defaultsOSRD
+preplace netloc floating_point_0_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc A_1 1 0 1 NJ
+preplace netloc floating_point_0_m_axis_result_tdata 1 1 1 NJ
+preplace netloc E_1 1 0 1 NJ
+preplace netloc result_input_valid2_1 1 0 1 NJ
+preplace netloc floating_point_2_s_axis_b_tready 1 0 2 40 460 NJ
+preplace netloc aclken2_1 1 0 1 NJ
+preplace netloc D_valid_1 1 0 1 NJ
+preplace netloc floating_point_0_s_axis_c_tready 1 0 2 40 420 NJ
+preplace netloc result_input3_1 1 0 1 NJ
+preplace netloc k_valid_1 1 0 1 NJ
+preplace netloc a_valid_1 1 0 1 NJ
+preplace netloc floating_point_1_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc aclken3_1 1 0 1 NJ
+preplace netloc c_valid_1 1 0 1 NJ
+preplace netloc reset3_1 1 0 1 NJ
+preplace netloc reset2_1 1 0 1 NJ
+preplace netloc floating_point_1_s_axis_a_tready 1 0 2 40 860 NJ
+preplace netloc aclken_1 1 0 1 NJ
+preplace netloc clk_1 1 0 1 20
+preplace netloc b_valid_1 1 0 1 NJ
+preplace netloc E_valid_1 1 0 1 NJ
+preplace netloc aresetn_1 1 0 1 NJ
+preplace netloc B_1 1 0 1 NJ
+preplace netloc floating_point_2_s_axis_a_tready 1 0 2 30 440 NJ
+preplace netloc floating_point_2_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc floating_point_2_m_axis_result_tdata 1 1 1 NJ
+preplace netloc floating_point_2_s_axis_c_tready 1 0 2 40 840 NJ
+preplace netloc D_1 1 0 1 NJ
+preplace netloc result_input3_valid_1 1 0 1 NJ
+preplace netloc k_1 1 0 1 NJ
+preplace netloc floating_point_1_m_axis_result_tdata 1 1 1 NJ
+preplace netloc floating_point_1_s_axis_b_tready 1 0 2 40 1160 NJ
+preplace netloc result_input2_1 1 0 1 NJ
+preplace netloc floating_point_0_s_axis_b_tready 1 0 2 40 40 NJ
+preplace netloc floating_point_0_s_axis_a_tready 1 0 2 20 20 NJ
+preplace netloc C_1 1 0 1 NJ
+levelinfo -pg 1 0 230 440 -top 0 -bot 1180
+",
+}
+0
