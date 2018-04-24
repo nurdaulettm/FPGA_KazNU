@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Wed Apr 11 17:42:17 2018
+| Date         : Tue Apr 24 17:09:45 2018
 | Host         : Asus running 64-bit major release  (build 9200)
 | Command      : report_io -file main_io_placed.rpt
 | Design       : main

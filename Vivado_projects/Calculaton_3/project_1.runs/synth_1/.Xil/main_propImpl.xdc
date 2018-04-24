@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:D:/Calculations/project_3/project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc rfile:../../../project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:d:/Calculations/project_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc rfile:../../../project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc id:2 order:LATE scoped_inst:FIFO/U0} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc rfile:../../../project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc rfile:../../../project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc id:2 order:LATE scoped_inst:FIFO/U0} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk]
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]

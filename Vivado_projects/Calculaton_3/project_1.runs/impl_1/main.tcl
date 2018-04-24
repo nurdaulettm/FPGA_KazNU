@@ -42,25 +42,23 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir D:/Calculations/project_3/project_1.cache/wt [current_project]
-  set_property parent.project_path D:/Calculations/project_3/project_1.xpr [current_project]
-  set_property ip_repo_paths d:/Calculations/project_3/project_1.cache/ip [current_project]
-  set_property ip_output_repo d:/Calculations/project_3/project_1.cache/ip [current_project]
-  add_files -quiet D:/Calculations/project_3/project_1.runs/synth_1/main.dcp
-  read_xdc -ref fifo_generator_0 -cells U0 d:/Calculations/project_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc
-  set_property processing_order EARLY [get_files d:/Calculations/project_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc]
-  read_xdc D:/Calculations/project_3/project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc
-  read_xdc -ref fifo_generator_0 -cells U0 d:/Calculations/project_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc
-  set_property processing_order LATE [get_files d:/Calculations/project_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc]
+  set_property webtalk.parent_dir D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.cache/wt [current_project]
+  set_property parent.project_path D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.xpr [current_project]
+  set_property ip_repo_paths d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.cache/ip [current_project]
+  set_property ip_output_repo d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.cache/ip [current_project]
+  add_files -quiet D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.runs/synth_1/main.dcp
+  read_xdc -ref fifo_generator_0 -cells U0 d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc
+  set_property processing_order EARLY [get_files d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc]
+  read_xdc D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/constrs_1/imports/FPGA/Nexys4_Master.xdc
+  read_xdc -ref fifo_generator_0 -cells U0 d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc
+  set_property processing_order LATE [get_files d:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_clocks.xdc]
   link_design -top main -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

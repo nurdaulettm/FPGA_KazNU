@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Wed Apr 11 17:43:09 2018
+| Date             : Tue Apr 24 17:10:46 2018
 | Host             : Asus running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : main
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.179 |
-| Dynamic (W)              | 0.081 |
+| Total On-Chip Power (W)  | 0.270 |
+| Dynamic (W)              | 0.172 |
 | Device Static (W)        | 0.098 |
 | Effective TJA (C/W)      | 4.6   |
-| Max Ambient (C)          | 84.2  |
-| Junction Temperature (C) | 25.8  |
+| Max Ambient (C)          | 83.8  |
+| Junction Temperature (C) | 26.2  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.012 |        3 |       --- |             --- |
-| Slice Logic             |     0.027 |     8408 |       --- |             --- |
-|   LUT as Logic          |     0.024 |     2455 |     63400 |            3.87 |
-|   Register              |     0.002 |     4437 |    126800 |            3.50 |
-|   LUT as Shift Register |    <0.001 |      100 |     19000 |            0.53 |
+| Clocks                  |     0.014 |        3 |       --- |             --- |
+| Slice Logic             |     0.070 |    17918 |       --- |             --- |
+|   LUT as Logic          |     0.065 |     5224 |     63400 |            8.24 |
+|   Register              |     0.002 |     9568 |    126800 |            7.55 |
+|   F7/F8 Muxes           |     0.002 |     1044 |     63400 |            1.65 |
+|   LUT as Shift Register |    <0.001 |      101 |     19000 |            0.53 |
 |   CARRY4                |    <0.001 |      142 |     15850 |            0.90 |
-|   F7/F8 Muxes           |    <0.001 |      148 |     63400 |            0.23 |
 |   BUFG                  |    <0.001 |        2 |        32 |            6.25 |
 |   Others                |     0.000 |      626 |       --- |             --- |
-| Signals                 |     0.034 |     6218 |       --- |             --- |
+| Signals                 |     0.080 |    13920 |       --- |             --- |
 | Block RAM               |    <0.001 |       16 |       135 |           11.85 |
 | DSPs                    |     0.007 |       10 |       240 |            4.17 |
 | I/O                     |    <0.001 |        7 |       210 |            3.33 |
 | Static Power            |     0.098 |          |           |                 |
-| Total                   |     0.179 |          |           |                 |
+| Total                   |     0.270 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.096 |       0.081 |      0.016 |
+| Vccint    |       1.000 |     0.187 |       0.172 |      0.016 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,7 +142,7 @@ Table of Contents
 +-------------------------------------------------------------------------------------+-----------+
 | Name                                                                                | Power (W) |
 +-------------------------------------------------------------------------------------+-----------+
-| main                                                                                |     0.081 |
+| main                                                                                |     0.172 |
 |   FIFO                                                                              |    <0.001 |
 |     U0                                                                              |    <0.001 |
 |       inst_fifo_gen                                                                 |    <0.001 |
@@ -202,14 +202,14 @@ Table of Contents
 |                       ramloop[9].ram.r                                              |    <0.001 |
 |                         prim_noinit.ram                                             |    <0.001 |
 |             rstblk                                                                  |    <0.001 |
-|   UUT                                                                               |     0.061 |
-|     calc_i                                                                          |     0.061 |
-|       floating_point_0                                                              |     0.024 |
-|         U0                                                                          |     0.024 |
-|           i_synth                                                                   |     0.024 |
-|             FMA_OP.OP                                                               |     0.023 |
-|               addsub                                                                |     0.018 |
-|                 add                                                                 |     0.018 |
+|   UUT                                                                               |     0.070 |
+|     calc_i                                                                          |     0.070 |
+|       floating_point_0                                                              |     0.025 |
+|         U0                                                                          |     0.025 |
+|           i_synth                                                                   |     0.025 |
+|             FMA_OP.OP                                                               |     0.024 |
+|               addsub                                                                |     0.019 |
+|                 add                                                                 |     0.019 |
 |                   A0_IP_DELAY                                                       |    <0.001 |
 |                     i_pipe                                                          |    <0.001 |
 |                   A1_IP_DELAY                                                       |     0.002 |
@@ -220,8 +220,8 @@ Table of Contents
 |                     FRAC_ADDSUB                                                     |     0.003 |
 |                       DSP_ADD.one_dsp.FRAC_ADDSUB                                   |     0.003 |
 |                         DSP48E1_ADD.DSP48E1_ADD                                     |    <0.001 |
-|                         EXT_LRG_DSP_ADD2_DELAY                                      |     0.001 |
-|                           i_pipe                                                    |     0.001 |
+|                         EXT_LRG_DSP_ADD2_DELAY                                      |    <0.001 |
+|                           i_pipe                                                    |    <0.001 |
 |                         FAB_DEL                                                     |    <0.001 |
 |                           i_pipe                                                    |    <0.001 |
 |                         LOGIC_ADD.ADD_0                                             |    <0.001 |
@@ -263,9 +263,9 @@ Table of Contents
 |                     ZERO_SML_ADD_DEL                                                |    <0.001 |
 |                       i_pipe                                                        |    <0.001 |
 |                     aligner.ALIGN_SHIFT                                             |     0.002 |
-|                       ALIGN_SHIFT                                                   |     0.001 |
-|                         MUX_LOOP[0].DEL_SHIFT                                       |    <0.001 |
-|                           i_pipe                                                    |    <0.001 |
+|                       ALIGN_SHIFT                                                   |     0.002 |
+|                         MUX_LOOP[0].DEL_SHIFT                                       |     0.001 |
+|                           i_pipe                                                    |     0.001 |
 |                         MUX_LOOP[1].DEL_SHIFT                                       |    <0.001 |
 |                           i_pipe                                                    |    <0.001 |
 |                       ALIGN_Z_D                                                     |    <0.001 |
@@ -416,7 +416,7 @@ Table of Contents
 |                         i_pipe                                                      |    <0.001 |
 |                       ZERO_DET_CC_1                                                 |    <0.001 |
 |                       ZERO_DET_CC_2.CC                                              |    <0.001 |
-|                     NORM_SHIFT                                                      |     0.002 |
+|                     NORM_SHIFT                                                      |     0.003 |
 |                       MUX_LOOP[0].DEL_SHIFT                                         |    <0.001 |
 |                         i_pipe                                                      |    <0.001 |
 |                       MUX_LOOP[1].DEL_SHIFT                                         |     0.001 |
@@ -434,8 +434,8 @@ Table of Contents
 |                     ZEROS_DELAY                                                     |    <0.001 |
 |                       i_pipe                                                        |    <0.001 |
 |                   OP                                                                |    <0.001 |
-|               c_delay                                                               |     0.001 |
-|                 i_pipe                                                              |     0.001 |
+|               c_delay                                                               |     0.002 |
+|                 i_pipe                                                              |     0.002 |
 |               mul                                                                   |     0.002 |
 |                 MULT                                                                |     0.002 |
 |                   gDSP.gDSP_only.iDSP                                               |     0.002 |
@@ -478,9 +478,9 @@ Table of Contents
 |                 i_pipe                                                              |    <0.001 |
 |             i_nd_to_rdy                                                             |    <0.001 |
 |             need_combiner.use_3to1_fma.skid_buffer_combiner                         |    <0.001 |
-|       floating_point_1                                                              |     0.007 |
-|         U0                                                                          |     0.007 |
-|           i_synth                                                                   |     0.007 |
+|       floating_point_1                                                              |     0.008 |
+|         U0                                                                          |     0.008 |
+|           i_synth                                                                   |     0.008 |
 |             ADDSUB_OP.ADDSUB                                                        |     0.007 |
 |               SPEED_OP.DSP.OP                                                       |     0.007 |
 |                 A_IP_DELAY                                                          |    <0.001 |
@@ -582,17 +582,17 @@ Table of Contents
 |                 OP                                                                  |    <0.001 |
 |             i_nd_to_rdy                                                             |    <0.001 |
 |             need_combiner.use_2to1.skid_buffer_combiner                             |    <0.001 |
-|       floating_point_2                                                              |     0.030 |
-|         U0                                                                          |     0.030 |
-|           i_synth                                                                   |     0.030 |
-|             FMA_OP.OP                                                               |     0.030 |
-|               addsub                                                                |     0.024 |
-|                 add                                                                 |     0.024 |
+|       floating_point_2                                                              |     0.037 |
+|         U0                                                                          |     0.037 |
+|           i_synth                                                                   |     0.037 |
+|             FMA_OP.OP                                                               |     0.037 |
+|               addsub                                                                |     0.031 |
+|                 add                                                                 |     0.031 |
 |                   A0_IP_DELAY                                                       |    <0.001 |
 |                     i_pipe                                                          |    <0.001 |
 |                   A1_IP_DELAY                                                       |     0.002 |
 |                     i_pipe                                                          |     0.002 |
-|                   ALIGN_BLK                                                         |     0.008 |
+|                   ALIGN_BLK                                                         |     0.009 |
 |                     ABS_DELAY                                                       |    <0.001 |
 |                       i_pipe                                                        |    <0.001 |
 |                     FRAC_ADDSUB                                                     |     0.004 |
@@ -811,9 +811,9 @@ Table of Contents
 |                           WIDE_NOR                                                  |     0.000 |
 |                     ZEROS_DELAY                                                     |    <0.001 |
 |                       i_pipe                                                        |    <0.001 |
-|                   OP                                                                |     0.003 |
-|               c_delay                                                               |     0.001 |
-|                 i_pipe                                                              |     0.001 |
+|                   OP                                                                |     0.009 |
+|               c_delay                                                               |     0.002 |
+|                 i_pipe                                                              |     0.002 |
 |               mul                                                                   |     0.003 |
 |                 MULT                                                                |     0.002 |
 |                   gDSP.gDSP_only.iDSP                                               |     0.002 |

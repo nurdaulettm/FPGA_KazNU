@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1523446649">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1524567772">
   <File Type="RDS-DCP" Name="main.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
@@ -48,12 +48,6 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/project_3/data.txt">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/data.txt"/>
-        <Attr Name="ImportTime" Val="1523418445"/>
       </FileInfo>
     </File>
     <Config>

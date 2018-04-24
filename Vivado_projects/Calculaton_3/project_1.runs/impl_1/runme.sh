@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Calculations/project_3/project_1.runs/impl_1'
+HD_PWD='D:/GitHub/FPGA-KazNU/Vivado_projects/Calculaton_3/project_1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
