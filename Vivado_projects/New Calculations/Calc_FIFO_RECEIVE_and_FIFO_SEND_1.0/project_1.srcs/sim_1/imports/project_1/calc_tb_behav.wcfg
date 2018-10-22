@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="calc_tb_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="calc_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="16574266666fs"></ZoomStartTime>
+      <ZoomEndTime time="21099266667fs"></ZoomEndTime>
+      <Cursor1Time time="20345100000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="41" />
+   <wvobject db_ref_id="1" fp_name="/calc_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/a_valid" type="logic">
+      <obj_property name="ElementShortName">a_valid</obj_property>
+      <obj_property name="ObjectShortName">a_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/b_valid" type="logic">
+      <obj_property name="ElementShortName">b_valid</obj_property>
+      <obj_property name="ObjectShortName">b_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/c_valid" type="logic">
+      <obj_property name="ElementShortName">c_valid</obj_property>
+      <obj_property name="ObjectShortName">c_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_valid" type="logic">
+      <obj_property name="ElementShortName">result_valid</obj_property>
+      <obj_property name="ObjectShortName">result_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/D_valid" type="logic">
+      <obj_property name="ElementShortName">D_valid</obj_property>
+      <obj_property name="ObjectShortName">D_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result2_valid" type="logic">
+      <obj_property name="ElementShortName">result2_valid</obj_property>
+      <obj_property name="ObjectShortName">result2_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input2_valid" type="logic">
+      <obj_property name="ElementShortName">result_input2_valid</obj_property>
+      <obj_property name="ObjectShortName">result_input2_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/E_valid" type="logic">
+      <obj_property name="ElementShortName">E_valid</obj_property>
+      <obj_property name="ObjectShortName">E_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/k_valid" type="logic">
+      <obj_property name="ElementShortName">k_valid</obj_property>
+      <obj_property name="ObjectShortName">k_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/D" type="array">
+      <obj_property name="ElementShortName">D[31:0]</obj_property>
+      <obj_property name="ObjectShortName">D[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/D_ready" type="logic">
+      <obj_property name="ElementShortName">D_ready</obj_property>
+      <obj_property name="ObjectShortName">D_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/E" type="array">
+      <obj_property name="ElementShortName">E[31:0]</obj_property>
+      <obj_property name="ObjectShortName">E[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/E_ready" type="logic">
+      <obj_property name="ElementShortName">E_ready</obj_property>
+      <obj_property name="ObjectShortName">E_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/a_ready" type="logic">
+      <obj_property name="ElementShortName">a_ready</obj_property>
+      <obj_property name="ObjectShortName">a_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input3" type="array">
+      <obj_property name="ElementShortName">result_input3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_input3[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/aclken" type="logic">
+      <obj_property name="ElementShortName">aclken</obj_property>
+      <obj_property name="ObjectShortName">aclken</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result2" type="array">
+      <obj_property name="ElementShortName">result2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result2[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/aclken2" type="logic">
+      <obj_property name="ElementShortName">aclken2</obj_property>
+      <obj_property name="ObjectShortName">aclken2</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/aclken3" type="logic">
+      <obj_property name="ElementShortName">aclken3</obj_property>
+      <obj_property name="ObjectShortName">aclken3</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/aresetn" type="logic">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/b_ready" type="logic">
+      <obj_property name="ElementShortName">b_ready</obj_property>
+      <obj_property name="ObjectShortName">b_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/c_ready" type="logic">
+      <obj_property name="ElementShortName">c_ready</obj_property>
+      <obj_property name="ObjectShortName">c_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/k_ready" type="logic">
+      <obj_property name="ElementShortName">k_ready</obj_property>
+      <obj_property name="ObjectShortName">k_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/reset2" type="logic">
+      <obj_property name="ElementShortName">reset2</obj_property>
+      <obj_property name="ObjectShortName">reset2</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/reset3" type="logic">
+      <obj_property name="ElementShortName">reset3</obj_property>
+      <obj_property name="ObjectShortName">reset3</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result" type="array">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result2_ready" type="logic">
+      <obj_property name="ElementShortName">result2_ready</obj_property>
+      <obj_property name="ObjectShortName">result2_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result3" type="array">
+      <obj_property name="ElementShortName">result3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result3[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result3_valid" type="logic">
+      <obj_property name="ElementShortName">result3_valid</obj_property>
+      <obj_property name="ObjectShortName">result3_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result3_ready" type="logic">
+      <obj_property name="ElementShortName">result3_ready</obj_property>
+      <obj_property name="ObjectShortName">result3_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input2" type="array">
+      <obj_property name="ElementShortName">result_input2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result_input2[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input2_ready" type="logic">
+      <obj_property name="ElementShortName">result_input2_ready</obj_property>
+      <obj_property name="ObjectShortName">result_input2_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input3_ready" type="logic">
+      <obj_property name="ElementShortName">result_input3_ready</obj_property>
+      <obj_property name="ObjectShortName">result_input3_ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_input3_valid" type="logic">
+      <obj_property name="ElementShortName">result_input3_valid</obj_property>
+      <obj_property name="ObjectShortName">result_input3_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/calc_tb/UUT/UUT/calc_i/result_ready" type="logic">
+      <obj_property name="ElementShortName">result_ready</obj_property>
+      <obj_property name="ObjectShortName">result_ready</obj_property>
+   </wvobject>
+</wave_config>
