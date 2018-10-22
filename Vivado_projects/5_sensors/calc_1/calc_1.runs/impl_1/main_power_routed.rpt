@@ -1,0 +1,981 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Sat Sep  1 14:41:50 2018
+| Host             : BAKYTZHAN-PC running 64-bit major release  (build 9200)
+| Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
+| Design           : main
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.132        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.034        |
+| Device Static (W)        | 0.098        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.008 |        3 |       --- |             --- |
+| Slice Logic             |     0.005 |     8103 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     2291 |     63400 |            3.61 |
+|   Register              |    <0.001 |     4325 |    126800 |            3.41 |
+|   CARRY4                |    <0.001 |      177 |     15850 |            1.12 |
+|   LUT as Shift Register |    <0.001 |       87 |     19000 |            0.46 |
+|   BUFG                  |    <0.001 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes           |    <0.001 |       20 |     63400 |            0.03 |
+|   Others                |     0.000 |      734 |       --- |             --- |
+| Signals                 |     0.007 |     5792 |       --- |             --- |
+| Block RAM               |     0.002 |       16 |       135 |           11.85 |
+| DSPs                    |     0.006 |       12 |       240 |            5.00 |
+| I/O                     |     0.006 |        7 |       210 |            3.33 |
+| Static Power            |     0.098 |          |           |                 |
+| Total                   |     0.132 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.044 |       0.028 |      0.015 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                             |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                          |                                                                                                                    |
+|                             |            |                                                       |                                                                                                                    |
+| Overall confidence level    | Medium     |                                                       |                                                                                                                    |
++-----------------------------+------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------+--------+-----------------+
+| Clock       | Domain | Constraint (ns) |
++-------------+--------+-----------------+
+| sys_clk_pin | clk    |            10.0 |
++-------------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------------+-----------+
+| Name                                                                                | Power (W) |
++-------------------------------------------------------------------------------------+-----------+
+| main                                                                                |     0.034 |
+|   FIFO                                                                              |     0.004 |
+|     U0                                                                              |     0.004 |
+|       inst_fifo_gen                                                                 |     0.004 |
+|         gconvfifo.rf                                                                |     0.004 |
+|           grf.rf                                                                    |     0.004 |
+|             gntv_or_sync_fifo.gcx.clkx                                              |    <0.001 |
+|               rd_pntr_cdc_inst                                                      |    <0.001 |
+|               wr_pntr_cdc_inst                                                      |    <0.001 |
+|             gntv_or_sync_fifo.gl0.rd                                                |    <0.001 |
+|               gras.rsts                                                             |    <0.001 |
+|                 c0                                                                  |    <0.001 |
+|                 c1                                                                  |    <0.001 |
+|               rpntr                                                                 |    <0.001 |
+|             gntv_or_sync_fifo.gl0.wr                                                |    <0.001 |
+|               gwas.wsts                                                             |    <0.001 |
+|                 c1                                                                  |    <0.001 |
+|                 c2                                                                  |    <0.001 |
+|               wpntr                                                                 |    <0.001 |
+|             gntv_or_sync_fifo.mem                                                   |     0.002 |
+|               gbm.gbmg.gbmga.ngecc.bmg                                              |     0.002 |
+|                 inst_blk_mem_gen                                                    |     0.002 |
+|                   gnbram.gnativebmg.native_blk_mem_gen                              |     0.002 |
+|                     valid.cstr                                                      |     0.002 |
+|                       has_mux_b.B                                                   |    <0.001 |
+|                       ramloop[0].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[10].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[11].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[12].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[13].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[14].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[15].ram.r                                             |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[1].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[2].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[3].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[4].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[5].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[6].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[7].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[8].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|                       ramloop[9].ram.r                                              |    <0.001 |
+|                         prim_noinit.ram                                             |    <0.001 |
+|             rstblk                                                                  |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd |     0.000 |
+|               ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst  |     0.000 |
+|               ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst          |    <0.001 |
+|   calculation_1                                                                     |     0.015 |
+|     add                                                                             |     0.002 |
+|       U0                                                                            |     0.002 |
+|         i_synth                                                                     |     0.002 |
+|           ADDSUB_OP.ADDSUB                                                          |     0.002 |
+|             SPEED_OP.DSP.OP                                                         |     0.002 |
+|               A_IP_DELAY                                                            |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               B_IP_DELAY                                                            |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               DSP48E1_BODY.ALIGN_ADD                                                |    <0.001 |
+|                 CIN_DELAY                                                           |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 DSP2                                                                |    <0.001 |
+|                 LRG_DELAY                                                           |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 SHIFT_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 SUB_ADD_IP_DELAY                                                    |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 SUB_DELAY                                                           |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 VALID_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 VALID_LRG_DELAY                                                     |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 ZERO_14_DET.CARRY_MUX                                               |    <0.001 |
+|                 ZERO_14_DET.ZERO_DET                                                |    <0.001 |
+|                   CARRY_ZERO_DET                                                    |    <0.001 |
+|                 Z_14_LZD_DELAY                                                      |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|               DSP48E1_BODY.EXP                                                      |    <0.001 |
+|                 A_EXP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 A_SIGN_DELAY                                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 BMA_EXP_DELAY                                                       |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 B_EXP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 B_SIGN_DELAY                                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 CANCELLATION_DELAY                                                  |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 COND_DET_A                                                          |    <0.001 |
+|                   EXP_DET_LUT.EXP_ALL_ONE_DEL                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_DET_LUT.EXP_ALL_ZERO_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   MANT_CARRY.MANT_ALL_ZERO_DET                                      |    <0.001 |
+|                     CARRY_ZERO_DET                                                  |    <0.001 |
+|                 COND_DET_B                                                          |    <0.001 |
+|                   EXP_DET_LUT.EXP_ALL_ONE_DEL                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_DET_LUT.EXP_ALL_ZERO_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   MANT_CARRY.MANT_ALL_ZERO_DET                                      |    <0.001 |
+|                     CARRY_ZERO_DET                                                  |    <0.001 |
+|                 DEC_STATE_PRE_OP_DELAY                                              |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 DET_SIGN_DELAY                                                      |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_OFF.LRG_EXP_DELAY                                               |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_OFF.STRUCT_ADD                                                  |    <0.001 |
+|                 NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY                            |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 NOT_LOW_LATENCY_NORM_DIST.SIGDELAY                                  |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 NUMB_CMP                                                            |    <0.001 |
+|                   NOT_FAST.CMP                                                      |    <0.001 |
+|                     C_CHAIN                                                         |    <0.001 |
+|                 SIGN_SIG_UP_DELAY                                                   |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 STATE_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 SUB_DELAY                                                           |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 merged_sub_mux.STRUCT_ADD                                           |    <0.001 |
+|                 merged_sub_mux.mux_DELAY                                            |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|               DSP48E1_BODY.NORM_RND                                                 |    <0.001 |
+|                 FULL_USAGE_DSP.LOD                                                  |    <0.001 |
+|                   DIST_DELAY                                                        |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   LEAD16_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORM_DELAY                                                        |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SHIFT_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 FULL_USAGE_DSP.MSBS_DELAY                                           |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 FULL_USAGE_DSP.ROUND_BIT_DELAY                                      |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 FULL_USAGE_DSP.SHIFT_RND                                            |    <0.001 |
+|                 FULL_USAGE_DSP.mant_in_delay                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 FULL_USAGE_DSP.mod_lod_delay                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 FULL_USAGE_DSP.zeros_delay                                          |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|               OP                                                                    |    <0.001 |
+|           i_nd_to_rdy                                                               |    <0.001 |
+|           need_combiner.use_2to1.skid_buffer_combiner                               |    <0.001 |
+|     mult_and_add_1                                                                  |     0.007 |
+|       U0                                                                            |     0.007 |
+|         i_synth                                                                     |     0.007 |
+|           FMA_OP.OP                                                                 |     0.006 |
+|             addsub                                                                  |     0.004 |
+|               add                                                                   |     0.004 |
+|                 A0_IP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 A1_IP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 ALIGN_BLK                                                           |     0.002 |
+|                   ABS_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FRAC_ADDSUB                                                       |     0.001 |
+|                     DSP_ADD.one_dsp.FRAC_ADDSUB                                     |     0.001 |
+|                       DSP48E1_ADD.DSP48E1_ADD                                       |    <0.001 |
+|                       EXT_LRG_DSP_ADD2_DELAY                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       FAB_DEL                                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ADD_0                                               |    <0.001 |
+|                       LOGIC_ADD.ADD_1                                               |    <0.001 |
+|                       LOGIC_ADD.DIST_1_ADD2_DEL                                     |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.LRG_LOGIC_DEL                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SML_LOGIC_DEL                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SUBTRACT_ADD2_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SUBTRACT_ADD2_DEL2                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ZERO_SML_ADD2_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ZERO_SML_ADD2_DEL2                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                   SML_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SUB_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DIST_1.DIST_1_ADD_DEL                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DIST_1.DIST_1_PREADD_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DSP_ADDSUB.OP_PREADD_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_ALIGN_DELAY                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_DEL                                                          |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_SML_ADD_DEL                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   aligner.ALIGN_SHIFT                                               |    <0.001 |
+|                     ALIGN_SHIFT                                                     |    <0.001 |
+|                       MUX_LOOP[0].DEL_SHIFT                                         |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[1].DEL_SHIFT                                         |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ALIGN_Z_D                                                       |    <0.001 |
+|                       EQ_ZERO                                                       |    <0.001 |
+|                         CARRY_ZERO_DET                                              |    <0.001 |
+|                       MUX_LOOP[0].DEL_Z_D                                           |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST                            |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[2].DEL_Z_D                                           |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[2].SKEW_DIST_DEL.DEL_DIST                            |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     cc                                                              |    <0.001 |
+|                     cout_delay                                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     dist_compare                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                     dist_ge_det_width_delay                                         |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   aligner.zero_smallest_i_delay                                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 ALIGN_DIST_0_DEL                                                    |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 A_SEL_IP_DELAY                                                      |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 B_IP_DELAY                                                          |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP                                                                 |    <0.001 |
+|                   A_AND_B_INF_DEL                                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_AND_B_INF_SIGN_DEL                                              |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_AND_B_ZERO_DEL                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_INF_B_NAN_DEL                                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_INF_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_NAN_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_INF_DEL                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_INF_SIGN_DEL                                               |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_NAN_DEL                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_ZERO_SIGN_DEL                                              |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SEL_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SIGN_XOR_B_SIGN_DEL                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_ZERO_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_INF_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_NAN_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_ZERO_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   CANCELLATION_DELAY                                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   DEC_STATE_PRE_OP_DELAY                                            |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   DET_SIGN_DELAY                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_EXP_ALIGN_DELAY                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_EXP_DELAY                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_OVER_NORMAL.LRG_ALMOST_OVER_DELAY                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.STRUCT_ADD                                                |    <0.001 |
+|                   FLOW_SEL_PRE_OP_DELAY                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.ADD_MANT_DELAY                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.FLOW_JUST_UNDER_DELAY                            |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.FLOW_OVER_DELAY                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.NORM_EXP_DELAY                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.NORM_EXP_MSB_DELAY                               |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORM_SIGN_DEL                                                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NUMB_CMP0                                                         |    <0.001 |
+|                     NOT_FAST.CMP                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                   NUMB_CMP1                                                         |    <0.001 |
+|                     NOT_FAST.CMP                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                   SIGN_SIG_UP_DELAY                                                 |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   STATE_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   STATE_SIG_UP_DELAY                                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   bma_exp_cc                                                        |    <0.001 |
+|                     Q_DEL                                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   conv_exp.downsize_exp                                             |    <0.001 |
+|                     COND_DET                                                        |    <0.001 |
+|                       EXP_DET_LUT.EXP_ALL_ONE_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       EXP_DET_LUT.EXP_ALL_ZERO_DEL                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MANT_CARRY.MANT_ALL_ZERO_DET                                  |    <0.001 |
+|                         CARRY_ZERO_DET                                              |    <0.001 |
+|                     FLOW_OP_DEL                                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     FLOW_REQ.EXP_NE.FLOW_DELAY                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     FLOW_REQ.EXP_RND_DELAY                                          |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     JUST_UNDER_OP_DEL                                               |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     STATE_DELAY                                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                 NORM                                                                |     0.001 |
+|                   ADD_MANT_DELAY_2                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   LZE                                                               |    <0.001 |
+|                     A_Z_DET                                                         |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[0].DIST_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[0].MUX_0                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ENCODE[0].MUX_Z                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ENCODE[1].DIST_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[1].MUX_0                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     TWO.DIST_DEL                                                    |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ZERO_DET_CC_1                                                   |    <0.001 |
+|                     ZERO_DET_CC_2.CC                                                |    <0.001 |
+|                   NORM_SHIFT                                                        |    <0.001 |
+|                     MUX_LOOP[0].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MUX_LOOP[1].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MUX_LOOP[2].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   ROUND                                                             |    <0.001 |
+|                     DSP48_E1.DSP48E1_ADD.DSP48E1_ADD                                |    <0.001 |
+|                     FULL_MANT_RND1_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     RND_BIT_GEN                                                     |    <0.001 |
+|                       NORM_1_OR_0.STRUCT_REQ.SPECIAL.RND_CHAIN                      |    <0.001 |
+|                       NORM_1_OR_0.STRUCT_REQ.SPECIAL.check_ones                     |    <0.001 |
+|                         WIDE_NOR                                                    |     0.000 |
+|                   ZEROS_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 OP                                                                  |    <0.001 |
+|             c_delay                                                                 |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul                                                                     |     0.002 |
+|               MULT                                                                  |     0.002 |
+|                 gDSP.gDSP_only.iDSP                                                 |     0.002 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|             mul_exp_inc_delay                                                       |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_exp_no_inc_dbl_bias_delay                                           |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_exp_no_inc_delay                                                    |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_sign_delay                                                          |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             special_detect                                                          |    <0.001 |
+|               detector_a                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|               detector_b                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 MANT_CARRY.MANT_ALL_ZERO_DET                                        |    <0.001 |
+|                   CARRY_ZERO_DET                                                    |    <0.001 |
+|               detector_c                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 MANT_CARRY.MANT_ALL_ZERO_DET                                        |    <0.001 |
+|                   CARRY_ZERO_DET                                                    |    <0.001 |
+|               specialcase_delay_balance_a                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               specialcase_delay_balance_b                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               specialcase_delay_balance_c                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|             specials_ab_delay                                                       |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             specials_c_delay                                                        |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|           i_nd_to_rdy                                                               |    <0.001 |
+|           need_combiner.use_3to1_fma.skid_buffer_combiner                           |    <0.001 |
+|     mult_and_add_2                                                                  |     0.006 |
+|       U0                                                                            |     0.006 |
+|         i_synth                                                                     |     0.006 |
+|           FMA_OP.OP                                                                 |     0.006 |
+|             addsub                                                                  |     0.004 |
+|               add                                                                   |     0.004 |
+|                 A0_IP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 A1_IP_DELAY                                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 ALIGN_BLK                                                           |     0.002 |
+|                   ABS_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FRAC_ADDSUB                                                       |     0.001 |
+|                     DSP_ADD.one_dsp.FRAC_ADDSUB                                     |     0.001 |
+|                       DSP48E1_ADD.DSP48E1_ADD                                       |    <0.001 |
+|                       EXT_LRG_DSP_ADD2_DELAY                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       FAB_DEL                                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ADD_0                                               |    <0.001 |
+|                       LOGIC_ADD.ADD_1                                               |    <0.001 |
+|                       LOGIC_ADD.DIST_1_ADD2_DEL                                     |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.LRG_LOGIC_DEL                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SML_LOGIC_DEL                                       |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SUBTRACT_ADD2_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.SUBTRACT_ADD2_DEL2                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ZERO_SML_ADD2_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       LOGIC_ADD.ZERO_SML_ADD2_DEL2                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                   SML_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SUB_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DIST_1.DIST_1_ADD_DEL                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DIST_1.DIST_1_PREADD_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   YES_DSP_ADDSUB.OP_PREADD_DEL                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_ALIGN_DELAY                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_DEL                                                          |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_SML_ADD_DEL                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   aligner.ALIGN_SHIFT                                               |    <0.001 |
+|                     ALIGN_SHIFT                                                     |    <0.001 |
+|                       MUX_LOOP[0].DEL_SHIFT                                         |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[1].DEL_SHIFT                                         |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ALIGN_Z_D                                                       |    <0.001 |
+|                       EQ_ZERO                                                       |    <0.001 |
+|                         CARRY_ZERO_DET                                              |    <0.001 |
+|                       MUX_LOOP[0].DEL_Z_D                                           |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST                            |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[2].DEL_Z_D                                           |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MUX_LOOP[2].SKEW_DIST_DEL.DEL_DIST                            |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     cc                                                              |    <0.001 |
+|                     cout_delay                                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     dist_compare                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                     dist_ge_det_width_delay                                         |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   aligner.zero_smallest_i_delay                                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 ALIGN_DIST_0_DEL                                                    |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 A_SEL_IP_DELAY                                                      |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 B_IP_DELAY                                                          |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP                                                                 |    <0.001 |
+|                   A_AND_B_INF_DEL                                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_AND_B_INF_SIGN_DEL                                              |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_AND_B_ZERO_DEL                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_INF_B_NAN_DEL                                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_INF_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_NAN_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_INF_DEL                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_INF_SIGN_DEL                                               |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_NAN_DEL                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_OR_B_ZERO_SIGN_DEL                                              |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SEL_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SIGN_XOR_B_SIGN_DEL                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_ZERO_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_INF_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_NAN_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_ZERO_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   CANCELLATION_DELAY                                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   DEC_STATE_PRE_OP_DELAY                                            |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   DET_SIGN_DELAY                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_EXP_ALIGN_DELAY                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_EXP_DELAY                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_OVER_NORMAL.LRG_ALMOST_OVER_DELAY                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.STRUCT_ADD                                                |    <0.001 |
+|                   FLOW_SEL_PRE_OP_DELAY                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.ADD_MANT_DELAY                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.FLOW_JUST_UNDER_DELAY                            |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.FLOW_OVER_DELAY                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.NORM_EXP_DELAY                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORMAL_NORM_DIST.NORM_EXP_MSB_DELAY                               |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NORM_SIGN_DEL                                                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NUMB_CMP0                                                         |    <0.001 |
+|                     NOT_FAST.CMP                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                   NUMB_CMP1                                                         |    <0.001 |
+|                     NOT_FAST.CMP                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                   SIGN_SIG_UP_DELAY                                                 |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   STATE_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   STATE_SIG_UP_DELAY                                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   bma_exp_cc                                                        |    <0.001 |
+|                     Q_DEL                                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   conv_exp.downsize_exp                                             |    <0.001 |
+|                     COND_DET                                                        |    <0.001 |
+|                       EXP_DET_LUT.EXP_ALL_ONE_DEL                                   |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       EXP_DET_LUT.EXP_ALL_ZERO_DEL                                  |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                       MANT_CARRY.MANT_ALL_ZERO_DET                                  |    <0.001 |
+|                         CARRY_ZERO_DET                                              |    <0.001 |
+|                     FLOW_OP_DEL                                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     FLOW_REQ.EXP_NE.FLOW_DELAY                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     FLOW_REQ.EXP_RND_DELAY                                          |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     JUST_UNDER_OP_DEL                                               |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     STATE_DELAY                                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                 NORM                                                                |     0.001 |
+|                   ADD_MANT_DELAY_2                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   LZE                                                               |    <0.001 |
+|                     A_Z_DET                                                         |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[0].DIST_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[0].MUX_0                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ENCODE[0].MUX_Z                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     ENCODE[1].DIST_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ENCODE[1].MUX_0                                                 |    <0.001 |
+|                       OP_DEL                                                        |    <0.001 |
+|                         i_pipe                                                      |    <0.001 |
+|                     TWO.DIST_DEL                                                    |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     ZERO_DET_CC_1                                                   |    <0.001 |
+|                     ZERO_DET_CC_2.CC                                                |    <0.001 |
+|                   NORM_SHIFT                                                        |    <0.001 |
+|                     MUX_LOOP[0].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MUX_LOOP[1].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MUX_LOOP[2].DEL_SHIFT                                           |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   ROUND                                                             |    <0.001 |
+|                     DSP48_E1.DSP48E1_ADD.DSP48E1_ADD                                |    <0.001 |
+|                     FULL_MANT_RND1_DEL                                              |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     RND_BIT_GEN                                                     |    <0.001 |
+|                       NORM_1_OR_0.STRUCT_REQ.SPECIAL.RND_CHAIN                      |    <0.001 |
+|                       NORM_1_OR_0.STRUCT_REQ.SPECIAL.check_ones                     |    <0.001 |
+|                         WIDE_NOR                                                    |    <0.001 |
+|                   ZEROS_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 OP                                                                  |    <0.001 |
+|             c_delay                                                                 |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul                                                                     |     0.002 |
+|               MULT                                                                  |     0.002 |
+|                 gDSP.gDSP_only.iDSP                                                 |     0.002 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|             mul_exp_inc_delay                                                       |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_exp_no_inc_dbl_bias_delay                                           |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_exp_no_inc_delay                                                    |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             mul_sign_delay                                                          |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             special_detect                                                          |    <0.001 |
+|               detector_a                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|               detector_b                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 MANT_CARRY.MANT_ALL_ZERO_DET                                        |    <0.001 |
+|                   CARRY_ZERO_DET                                                    |    <0.001 |
+|               detector_c                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ONE_DEL                                         |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 EXP_DET_LUT.EXP_ALL_ZERO_DEL                                        |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 MANT_CARRY.MANT_ALL_ZERO_DET                                        |    <0.001 |
+|                   CARRY_ZERO_DET                                                    |    <0.001 |
+|               specialcase_delay_balance_a                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               specialcase_delay_balance_b                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               specialcase_delay_balance_c                                           |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|             specials_ab_delay                                                       |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|             specials_c_delay                                                        |    <0.001 |
+|               i_pipe                                                                |    <0.001 |
+|           i_nd_to_rdy                                                               |    <0.001 |
+|           need_combiner.use_3to1_fma.skid_buffer_combiner                           |    <0.001 |
+|   genblk1.genblk1[1].Proverka                                                       |    <0.001 |
+|   genblk1.genblk1[3].Proverka                                                       |     0.003 |
+|     calc_check_1                                                                    |     0.003 |
+|       compare                                                                       |    <0.001 |
+|         U0                                                                          |    <0.001 |
+|           i_synth                                                                   |    <0.001 |
+|             COMP_OP.SPD.OP                                                          |    <0.001 |
+|               CMP_COND_DELAY                                                        |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               MET_REG                                                               |    <0.001 |
+|                 i_pipe                                                              |    <0.001 |
+|               STRUCT_CMP.A_EQ_B_DET                                                 |    <0.001 |
+|                 WIDE_AND                                                            |    <0.001 |
+|               STRUCT_CMP.A_EXP_ALL_ONE_DET                                          |    <0.001 |
+|                 CARRY_ZERO_DET                                                      |    <0.001 |
+|               STRUCT_CMP.A_FRAC_NOT_ZERO_DET                                        |    <0.001 |
+|                 WIDE_NOR                                                            |    <0.001 |
+|               STRUCT_CMP.A_GT_B_DET                                                 |    <0.001 |
+|                 C_CHAIN                                                             |    <0.001 |
+|               STRUCT_CMP.EXP_ALL_ZERO_DET                                           |    <0.001 |
+|                 CARRY_ZERO_DET                                                      |    <0.001 |
+|             i_nd_to_rdy                                                             |    <0.001 |
+|             need_combiner.use_2to1.skid_buffer_combiner                             |    <0.001 |
+|       math_abs                                                                      |     0.000 |
+|       substract                                                                     |     0.003 |
+|         U0                                                                          |     0.003 |
+|           i_synth                                                                   |     0.003 |
+|             ADDSUB_OP.ADDSUB                                                        |     0.002 |
+|               SPEED_OP.DSP.OP                                                       |     0.002 |
+|                 A_IP_DELAY                                                          |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 B_IP_DELAY                                                          |    <0.001 |
+|                   i_pipe                                                            |    <0.001 |
+|                 DSP48E1_BODY.ALIGN_ADD                                              |    <0.001 |
+|                   CIN_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   DSP2                                                              |    <0.001 |
+|                   LRG_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SHIFT_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SUB_ADD_IP_DELAY                                                  |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SUB_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   VALID_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   VALID_LRG_DELAY                                                   |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   ZERO_14_DET.CARRY_MUX                                             |    <0.001 |
+|                   ZERO_14_DET.ZERO_DET                                              |    <0.001 |
+|                     CARRY_ZERO_DET                                                  |    <0.001 |
+|                   Z_14_LZD_DELAY                                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 DSP48E1_BODY.EXP                                                    |    <0.001 |
+|                   A_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   A_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   BMA_EXP_DELAY                                                     |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_EXP_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   B_SIGN_DELAY                                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   CANCELLATION_DELAY                                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   COND_DET_A                                                        |    <0.001 |
+|                     EXP_DET_LUT.EXP_ALL_ONE_DEL                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     EXP_DET_LUT.EXP_ALL_ZERO_DEL                                    |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MANT_CARRY.MANT_ALL_ZERO_DET                                    |    <0.001 |
+|                       CARRY_ZERO_DET                                                |    <0.001 |
+|                   COND_DET_B                                                        |    <0.001 |
+|                     EXP_DET_LUT.EXP_ALL_ONE_DEL                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     EXP_DET_LUT.EXP_ALL_ZERO_DEL                                    |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     MANT_CARRY.MANT_ALL_ZERO_DET                                    |    <0.001 |
+|                       CARRY_ZERO_DET                                                |    <0.001 |
+|                   DEC_STATE_PRE_OP_DELAY                                            |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.LRG_EXP_DELAY                                             |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   EXP_OFF.STRUCT_ADD                                                |    <0.001 |
+|                   NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY                          |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NOT_LOW_LATENCY_NORM_DIST.SIGDELAY                                |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   NUMB_CMP                                                          |    <0.001 |
+|                     NOT_FAST.CMP                                                    |    <0.001 |
+|                       C_CHAIN                                                       |    <0.001 |
+|                   STATE_DELAY                                                       |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   SUB_DELAY                                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   merged_sub_mux.STRUCT_ADD                                         |    <0.001 |
+|                   merged_sub_mux.mux_DELAY                                          |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 DSP48E1_BODY.NORM_RND                                               |    <0.001 |
+|                   FULL_USAGE_DSP.LOD                                                |    <0.001 |
+|                     DIST_DELAY                                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     LEAD16_DELAY                                                    |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     NORM_DELAY                                                      |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                     SHIFT_DELAY                                                     |    <0.001 |
+|                       i_pipe                                                        |    <0.001 |
+|                   FULL_USAGE_DSP.MSBS_DELAY                                         |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FULL_USAGE_DSP.ROUND_BIT_DELAY                                    |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FULL_USAGE_DSP.SHIFT_RND                                          |    <0.001 |
+|                   FULL_USAGE_DSP.mant_in_delay                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FULL_USAGE_DSP.mod_lod_delay                                      |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                   FULL_USAGE_DSP.zeros_delay                                        |    <0.001 |
+|                     i_pipe                                                          |    <0.001 |
+|                 OP                                                                  |    <0.001 |
+|             i_nd_to_rdy                                                             |    <0.001 |
+|             need_combiner.use_2to1.skid_buffer_combiner                             |    <0.001 |
++-------------------------------------------------------------------------------------+-----------+
+
+

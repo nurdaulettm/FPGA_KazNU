@@ -1,0 +1,63 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port comp_2_valid -pg 1 -y 382 -defaultsOSRD
+preplace port sub_1_ready -pg 1 -y 520 -defaultsOSRD
+preplace port reset_comp -pg 1 -y 450 -defaultsOSRD
+preplace port sub_result_valid -pg 1 -y 700 -defaultsOSRD
+preplace port sub_2_valid -pg 1 -y 720 -defaultsOSRD
+preplace port sub_2_ready -pg 1 -y 840 -defaultsOSRD
+preplace port abs_in_valid -pg 1 -y 120 -defaultsOSRD
+preplace port abs_in_ready -pg 1 -y 180 -defaultsOSRD
+preplace port comp_1_valid -pg 1 -y 314 -defaultsOSRD
+preplace port reset_sub -pg 1 -y 780 -defaultsOSRD
+preplace port comp_result_valid -pg 1 -y 370 -defaultsOSRD
+preplace port comp_1_ready -pg 1 -y 200 -defaultsOSRD
+preplace port sub_1_valid -pg 1 -y 640 -defaultsOSRD
+preplace port abs_out_valid -pg 1 -y 110 -defaultsOSRD
+preplace port clken_sub -pg 1 -y 760 -defaultsOSRD
+preplace port clken_comp -pg 1 -y 430 -defaultsOSRD
+preplace port clk -pg 1 -y 410 -defaultsOSRD
+preplace port comp_2_ready -pg 1 -y 500 -defaultsOSRD
+preplace portBus abs_out -pg 1 -y 90 -defaultsOSRD
+preplace portBus abs_in -pg 1 -y 80 -defaultsOSRD
+preplace portBus Comp_1 -pg 1 -y 278 -defaultsOSRD
+preplace portBus sub_result -pg 1 -y 680 -defaultsOSRD
+preplace portBus Comp_2 -pg 1 -y 350 -defaultsOSRD
+preplace portBus Sub_1 -pg 1 -y 600 -defaultsOSRD
+preplace portBus comp_result -pg 1 -y 350 -defaultsOSRD
+preplace portBus Sub_2 -pg 1 -y 680 -defaultsOSRD
+preplace inst compare -pg 1 -lvl 1 -y 350 -defaultsOSRD -resize 350 256
+preplace inst math_abs -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace inst substract -pg 1 -lvl 1 -y 680 -defaultsOSRD
+preplace netloc substract_s_axis_a_tready 1 0 2 40 520 NJ
+preplace netloc abs_in_1 1 0 1 NJ
+preplace netloc math_abs_m_axis_result_tdata 1 1 1 NJ
+preplace netloc compare_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc compare_m_axis_result_tdata 1 1 1 NJ
+preplace netloc clken_sub_1 1 0 1 NJ
+preplace netloc substract_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc math_abs_s_axis_a_tready 1 0 2 40 180 NJ
+preplace netloc substract_m_axis_result_tdata 1 1 1 NJ
+preplace netloc comp_1_valid_1 1 0 1 NJ
+preplace netloc comp_2_valid_1 1 0 1 10J
+preplace netloc compare_s_axis_a_tready 1 0 2 40 200 NJ
+preplace netloc substract_s_axis_b_tready 1 0 2 40 840 NJ
+preplace netloc Sub_1_1 1 0 1 NJ
+preplace netloc abs_in_valid_1 1 0 1 NJ
+preplace netloc clk_1 1 0 1 20
+preplace netloc Comp_1_1 1 0 1 NJ
+preplace netloc clken_1 1 0 1 10J
+preplace netloc comp_reset_1 1 0 1 30J
+preplace netloc sub_2_valid_1 1 0 1 NJ
+preplace netloc Sub_2_1 1 0 1 NJ
+preplace netloc compare_s_axis_b_tready 1 0 2 40 500 NJ
+preplace netloc sub_1_valid_1 1 0 1 NJ
+preplace netloc math_abs_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc reset_sub_1 1 0 1 NJ
+preplace netloc Comp_2_1 1 0 1 NJ
+levelinfo -pg 1 -10 240 460 -top 0 -bot 860
+",
+}
+0

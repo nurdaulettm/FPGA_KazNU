@@ -1,0 +1,85 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port reset_3 -pg 1 -y 820 -defaultsOSRD
+preplace port d_valid -pg 1 -y 1100 -defaultsOSRD
+preplace port k_ready -pg 1 -y 460 -defaultsOSRD
+preplace port k_valid -pg 1 -y 600 -defaultsOSRD
+preplace port result_1_input_ready -pg 1 -y 900 -defaultsOSRD
+preplace port e_ready -pg 1 -y 880 -defaultsOSRD
+preplace port result_2_input_ready -pg 1 -y 480 -defaultsOSRD
+preplace port result_1_valid -pg 1 -y 260 -defaultsOSRD
+preplace port c_valid -pg 1 -y 320 -defaultsOSRD
+preplace port b_valid -pg 1 -y 240 -defaultsOSRD
+preplace port result_3_valid -pg 1 -y 700 -defaultsOSRD
+preplace port c_ready -pg 1 -y 440 -defaultsOSRD
+preplace port e_valid -pg 1 -y 760 -defaultsOSRD
+preplace port result_1_input_valid -pg 1 -y 1020 -defaultsOSRD
+preplace port clken_1 -pg 1 -y 360 -defaultsOSRD
+preplace port result_2_valid -pg 1 -y 1080 -defaultsOSRD
+preplace port clken_2 -pg 1 -y 1140 -defaultsOSRD
+preplace port clk -pg 1 -y 340 -defaultsOSRD
+preplace port clken_3 -pg 1 -y 800 -defaultsOSRD
+preplace port b_ready -pg 1 -y 40 -defaultsOSRD
+preplace port result_2_input_valid -pg 1 -y 680 -defaultsOSRD
+preplace port reset_1 -pg 1 -y 380 -defaultsOSRD
+preplace port d_ready -pg 1 -y 1220 -defaultsOSRD
+preplace port a_ready -pg 1 -y 20 -defaultsOSRD
+preplace port reset_2 -pg 1 -y 1160 -defaultsOSRD
+preplace port a_valid -pg 1 -y 160 -defaultsOSRD
+preplace portBus A -pg 1 -y 120 -defaultsOSRD
+preplace portBus B -pg 1 -y 200 -defaultsOSRD
+preplace portBus C -pg 1 -y 280 -defaultsOSRD
+preplace portBus k -pg 1 -y 560 -defaultsOSRD
+preplace portBus D -pg 1 -y 1060 -defaultsOSRD
+preplace portBus E -pg 1 -y 720 -defaultsOSRD
+preplace portBus result_1_input -pg 1 -y 980 -defaultsOSRD
+preplace portBus result_2_input -pg 1 -y 640 -defaultsOSRD
+preplace portBus result_1 -pg 1 -y 240 -defaultsOSRD
+preplace portBus result_2 -pg 1 -y 1060 -defaultsOSRD
+preplace portBus result_3 -pg 1 -y 680 -defaultsOSRD
+preplace inst add -pg 1 -lvl 1 -y 1060 -defaultsOSRD
+preplace inst mult_and_add_1 -pg 1 -lvl 1 -y 240 -defaultsOSRD
+preplace inst mult_and_add_2 -pg 1 -lvl 1 -y 680 -defaultsOSRD
+preplace netloc mult_and_add_2_s_axis_c_tready 1 0 2 40 880 NJ
+preplace netloc mult_and_add_1_s_axis_a_tready 1 0 2 20 20 NJ
+preplace netloc A_1 1 0 1 NJ
+preplace netloc add_s_axis_a_tready 1 0 2 40 900 NJ
+preplace netloc e_valid_1 1 0 1 NJ
+preplace netloc E_1 1 0 1 NJ
+preplace netloc result_2_input_valid_1 1 0 1 NJ
+preplace netloc clken_3_1 1 0 1 NJ
+preplace netloc mult_and_add_2_s_axis_b_tready 1 0 2 40 480 NJ
+preplace netloc k_valid_1 1 0 1 NJ
+preplace netloc d_valid_1 1 0 1 NJ
+preplace netloc a_valid_1 1 0 1 NJ
+preplace netloc mult_and_add_2_s_axis_a_tready 1 0 2 30 460 NJ
+preplace netloc mult_and_add_1_s_axis_b_tready 1 0 2 40 40 NJ
+preplace netloc reset_3_1 1 0 1 NJ
+preplace netloc add_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc add_m_axis_result_tdata 1 1 1 NJ
+preplace netloc result_2_input_1 1 0 1 NJ
+preplace netloc c_valid_1 1 0 1 NJ
+preplace netloc mult_and_add_2_m_axis_result_tdata 1 1 1 NJ
+preplace netloc mult_and_add_1_m_axis_result_tdata 1 1 1 NJ
+preplace netloc clk_1 1 0 1 20
+preplace netloc b_valid_1 1 0 1 NJ
+preplace netloc reset_2_1 1 0 1 NJ
+preplace netloc result_1_input_1 1 0 1 NJ
+preplace netloc result_1_input_valid_1 1 0 1 NJ
+preplace netloc mult_and_add_1_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc B_1 1 0 1 NJ
+preplace netloc add_s_axis_b_tready 1 0 2 40 1220 NJ
+preplace netloc mult_and_add_1_s_axis_c_tready 1 0 2 40 440 NJ
+preplace netloc mult_and_add_2_m_axis_result_tvalid 1 1 1 NJ
+preplace netloc reset_1_1 1 0 1 NJ
+preplace netloc D_1 1 0 1 NJ
+preplace netloc k_1 1 0 1 NJ
+preplace netloc clken_2_1 1 0 1 NJ
+preplace netloc clken_1_1 1 0 1 NJ
+preplace netloc C_1 1 0 1 NJ
+levelinfo -pg 1 0 240 460 -top 0 -bot 1240
+",
+}
+0
