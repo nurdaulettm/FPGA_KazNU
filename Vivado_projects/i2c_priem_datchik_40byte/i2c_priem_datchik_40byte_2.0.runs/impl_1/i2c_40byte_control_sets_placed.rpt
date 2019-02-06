@@ -1,0 +1,61 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Wed Feb 06 12:25:44 2019
+| Host         : BAKYTZHAN-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file i2c_40byte_control_sets_placed.rpt
+| Design       : i2c_40byte
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     8 |
+| Minimum Number of register sites lost to control set restrictions |    37 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             328 |           98 |
+| No           | No                    | Yes                    |              13 |            4 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               8 |            6 |
+| Yes          | No                    | Yes                    |              14 |            5 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------+---------------------+------------------+----------------+
+|  Clock Signal  | Enable Signal |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++----------------+---------------+---------------------+------------------+----------------+
+|  stop          | incycle       | incycle_i_1_n_0     |                1 |              1 |
+|  sda_IBUF_BUFG |               |                     |                1 |              1 |
+| ~sda_IBUF_BUFG |               |                     |                1 |              1 |
+| ~scl_IBUF_BUFG |               |                     |                3 |              5 |
+|  scl_IBUF_BUFG | incycle       |                     |                6 |              8 |
+|  scl_IBUF_BUFG |               | bitcount[0]_i_2_n_0 |                4 |             13 |
+|  scl_IBUF_BUFG | i0            | bitcount[0]_i_2_n_0 |                4 |             13 |
+|  scl_IBUF_BUFG |               |                     |               93 |            321 |
++----------------+---------------+---------------------+------------------+----------------+
+
+

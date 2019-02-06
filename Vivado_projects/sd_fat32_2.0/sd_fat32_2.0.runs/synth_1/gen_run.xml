@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1548583601">
+  <File Type="RDS-DCP" Name="sd_fat32_controller_wrapper.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="sd_fat32_controller_wrapper_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="sd_fat32_controller_wrapper_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="sd_fat32_controller_wrapper.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+  <File Type="RDS-RDS" Name="sd_fat32_controller_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="sd_fat32_controller_wrapper_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="sd_fat32_controller_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="sd_fat32_controller_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/sd_fat32_controller.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sd_fat32/sd_fat32.srcs/sources_1/bd/sd_fat32_controller/sd_fat32_controller.bd"/>
+        <Attr Name="ImportTime" Val="1548507216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/hdl/sd_fat32_controller_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/ip/sd_fat32_controller_mig_7series_0_1/board.prj">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sd_fat32/sd_fat32.srcs/sources_1/bd/sd_fat32_controller/ip/sd_fat32_controller_mig_7series_0_1/board.prj"/>
+        <Attr Name="ImportTime" Val="1542351442"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/ip/sd_fat32_controller_PmodSD_0_1/src/PmodSD_axi_gpio_0_0/PmodSD_axi_gpio_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/ip/sd_fat32_controller_PmodSD_0_1/src/PmodSD_axi_quad_spi_0_0/PmodSD_axi_quad_spi_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/sd_fat32_controller/ip/sd_fat32_controller_PmodSD_0_1/src/PmodSD_pmod_bridge_0_0/PmodSD_pmod_bridge_0_0.upgrade_log"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sd_fat32_controller_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
