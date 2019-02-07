@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date             : Wed Feb 06 12:26:20 2019
+| Date             : Thu Feb 07 16:40:44 2019
 | Host             : BAKYTZHAN-PC running 64-bit major release  (build 9200)
 | Command          : 
 | Design           : i2c_40byte
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 10.878 |
-| Dynamic (W)              | 10.669 |
-| Device Static (W)        | 0.209  |
+| Total On-Chip Power (W)  | 11.129 |
+| Dynamic (W)              | 10.914 |
+| Device Static (W)        | 0.215  |
 | Effective TJA (C/W)      | 4.6    |
-| Max Ambient (C)          | 35.4   |
-| Junction Temperature (C) | 74.6   |
+| Max Ambient (C)          | 34.2   |
+| Junction Temperature (C) | 75.8   |
 | Confidence Level         | Low    |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,17 +49,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     2.242 |     1189 |       --- |             --- |
-|   LUT as Logic |     2.037 |      635 |     63400 |            1.00 |
-|   CARRY4       |     0.087 |       28 |     15850 |            0.18 |
-|   F7/F8 Muxes  |     0.087 |       72 |     63400 |            0.11 |
-|   Register     |     0.022 |      363 |    126800 |            0.29 |
-|   BUFG         |     0.009 |        2 |        32 |            6.25 |
+| Slice Logic    |     0.498 |      484 |       --- |             --- |
+|   LUT as Logic |     0.490 |      269 |     63400 |            0.42 |
+|   BUFG         |     0.006 |        2 |        32 |            6.25 |
+|   Register     |     0.003 |      131 |    126800 |            0.10 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     2.240 |      740 |       --- |             --- |
-| I/O            |     6.187 |       19 |       210 |            9.05 |
-| Static Power   |     0.209 |          |           |                 |
-| Total          |    10.878 |          |           |                 |
+| Signals        |     0.453 |      382 |       --- |             --- |
+| I/O            |     9.963 |       22 |       210 |           10.48 |
+| Static Power   |     0.215 |          |           |                 |
+| Total          |    11.129 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,9 +67,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     4.596 |       4.492 |      0.105 |
-| Vccaux    |       1.800 |     0.256 |       0.226 |      0.029 |
-| Vcco33    |       3.300 |     1.752 |       1.748 |      0.004 |
+| Vccint    |       1.000 |     1.081 |       0.971 |      0.109 |
+| Vccaux    |       1.800 |     0.394 |       0.364 |      0.030 |
+| Vcco33    |       3.300 |     2.818 |       2.814 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -136,8 +134,8 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| i2c_40byte       |    10.669 |
-|   sda_IOBUF_inst |     0.418 |
+| i2c_40byte       |    10.914 |
+|   sda_IOBUF_inst |     0.000 |
 +------------------+-----------+
 
 

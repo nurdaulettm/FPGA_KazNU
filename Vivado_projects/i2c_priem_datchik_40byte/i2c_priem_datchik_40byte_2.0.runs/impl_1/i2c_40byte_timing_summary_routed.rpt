@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-| Date         : Wed Feb 06 12:26:19 2019
+| Date         : Thu Feb 07 16:40:44 2019
 | Host         : BAKYTZHAN-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file i2c_40byte_timing_summary_routed.rpt -rpx i2c_40byte_timing_summary_routed.rpx
 | Design       : i2c_40byte
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 360 register/latch pins with no clock driven by root clock pin: scl (HIGH)
+ There are 128 register/latch pins with no clock driven by root clock pin: scl (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: sda (HIGH)
 
@@ -71,7 +71,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 411 pins that are not constrained for maximum delay. (HIGH)
+ There are 167 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

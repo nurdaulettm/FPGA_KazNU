@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.runs/impl_1'
+HD_PWD='D:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

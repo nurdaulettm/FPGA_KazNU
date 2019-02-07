@@ -52,12 +52,12 @@ set rc [catch {
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir D:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.cache/wt [current_project]
-  set_property parent.project_path D:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.xpr [current_project]
-  set_property ip_repo_paths d:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.cache/ip [current_project]
-  set_property ip_output_repo d:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.cache/ip [current_project]
-  add_files -quiet D:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.runs/synth_1/i2c_40byte.dcp
-  read_xdc D:/FPGA/Trash/i2c_priem_datchik_40byte_2.0/i2c_priem_datchik_40byte_2.0.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc
+  set_property webtalk.parent_dir D:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.cache/wt [current_project]
+  set_property parent.project_path D:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.xpr [current_project]
+  set_property ip_repo_paths d:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.cache/ip [current_project]
+  set_property ip_output_repo d:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.cache/ip [current_project]
+  add_files -quiet D:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.runs/synth_1/i2c_40byte.dcp
+  read_xdc D:/FPGA/Projects/i2c_priem_datchik_40byte/i2c_priem_datchik_40byte_2.0.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc
   link_design -top i2c_40byte -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
