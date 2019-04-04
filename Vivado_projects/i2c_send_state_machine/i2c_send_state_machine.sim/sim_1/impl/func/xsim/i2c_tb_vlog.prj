@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"i2c_tb_func_impl.v" \
+"../../../../../i2c_send_state_machine.srcs/sim_1/new/i2c_tb.v" \
+
+# Do not sort compile order
+nosort
