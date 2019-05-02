@@ -1,0 +1,1 @@
+-wto "a2db6b51758e40f5898d5b1264e36182" --incr --debug "typical" --relax --mt "2" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "i2c_tb_time_synth" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.i2c_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

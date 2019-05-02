@@ -1,0 +1,13 @@
+set_property SRC_FILE_INFO {cfile:{D:/Documents/Vivado 2018/Trash/i2c_send_state_machine/i2c_send_state_machine.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc} rfile:../../../i2c_send_state_machine.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
+set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
+set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { sda }]; #IO_L1P_T0_AD0P_15 Sch=jb[1]
+set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { scl }]; #IO_L14N_T2_SRCC_15 Sch=jb[2]
+set_property src_info {type:XDC file:1 line:96 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {sda_IBUF}]
+set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {scl_IBUF}]
